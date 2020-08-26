@@ -55,3 +55,35 @@ img {
 .column { 
   min-height: 200px;
 }
+
+.column img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.banner {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.banner img {
+  width: 100%;
+  /* vh = viewport height */
+  height: 50vh;
+  object-fit: cover;
+}
+
+.wide-column {
+  grid-column: 1 / span 2;
+}
+
+.highlight {
+  background-color: lightskyblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
