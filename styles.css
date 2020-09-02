@@ -1,5 +1,16 @@
+:root {
+  --carolina-blue: hsla(207, 70%, 59%, 1);
+  --violet-crayola: hsla(307, 50%, 40%, 1);
+  --cultured: hsla(0, 0%, 96%, 1);
+  --mandarin: hsla(18, 83%, 63%, 1);
+  --dark-purple: hsla(252, 74%, 9%, 1);
+  --primary: hsla(307, 50%, 40%, 1);
+  --primary-mid: hsla(307, 50%, 60%, 1);
+  --padding: 1.5ch;
+}
+
 body {
-  background-color: #4f4f4f;
+  background-color: var(--dark-purple);
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
 }
@@ -8,13 +19,13 @@ body {
   /* css grid */
   display: grid;
   grid-template-columns: 200px auto auto;
-  background-color: #027977;
+  background-color: var(--violet-crayola);
 }
 
 .logo {
   max-width: 120px;
   min-width: 70px;
-  padding: 15px;
+  padding: var(--padding);
 }
 
 .main-nav {
@@ -28,15 +39,14 @@ body {
 }
 
 .main-nav a {
-  color: #efefef;
+  color: var(--cultured);
   text-decoration: none;
   padding: 15px;
   display: block;
-  background-color: #006362;
 }
 
 .main-nav a:hover {
-  background-color: #004645;
+  background-color: var(--dark-purple);
 }
 
 .container {
@@ -54,6 +64,11 @@ img {
 
 .column { 
   min-height: 200px;
+}
+
+.column h3, .column p {
+  color: var(--cultured);
+  padding: 0 var(--padding);
 }
 
 .column img {
@@ -81,9 +96,49 @@ img {
 }
 
 .highlight {
-  background-color: lightskyblue;
-  display: flex;
+  background-color:var(--mandarin);
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
+  display: grid;
+  place-items: center;
+}
+
+.highlight h3 {
+  font-size: 3em;
+  text-shadow: 0 0 2px var(--dark-purple);
+}
+
+.main-footer {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  background-color: var(--violet-crayola);
+  min-height: 200px;
+}
+
+.secondary {
+  align-self: end;
+  display: flex;
+}
+.secondary a {
+  color: var(--cultured);
+  padding: var(--padding);
+  text-decoration: none;
+}
+
+.social {
+  justify-self: end;
+  display: flex;
+}
+
+.social a {
+  color: var(--cultured);
+  padding: var(--padding);
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+.social a:hover {
+  color: var(--carolina-blue);
 }
 
